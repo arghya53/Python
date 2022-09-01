@@ -45,7 +45,7 @@ def ceaser_decrypt(cipher_text):
 
 # now testing the function
 
-if __name__ == '__main__':
+if __name__ == '__main__': # it is because the python interpreter is running that module (the source file) as the main program, it sets the special __name__ variable to have a value “__main__”
     m = "Welcome to my house"
     encrypted = ceaser_encrypt(m)
     print (encrypted)
