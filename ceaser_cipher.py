@@ -2,7 +2,7 @@
 ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 KEY = 3
 
-def ceaser_encrypt(plain_text):
+def ceaser_encrypt(plain_text, KEY):
     # the encrypted message
     cipher_text = ''
     # we make the algorithm case insensitive
@@ -17,14 +17,14 @@ def ceaser_encrypt(plain_text):
         
         index = (index + KEY) % len(ALPHABET) # applying ceaser_cipher formula
         
-        # keep appending the given leter to the cipher text
+        # keep appending the given letter to the cipher text
 
         cipher_text = cipher_text + ALPHABET[index]
 
     return cipher_text
 
 
-def ceaser_decrypt(cipher_text):
+def ceaser_decrypt(cipher_text, KEY):
 
 
     plain_text= ''
@@ -47,9 +47,9 @@ def ceaser_decrypt(cipher_text):
 
 if __name__ == '__main__': # it is because the python interpreter is running that module (the source file) as the main program, it sets the special __name__ variable to have a value “__main__”
     m = "Welcome to my house"
-    encrypted = ceaser_encrypt(m)
+    encrypted = ceaser_encrypt(m, 3)
     print (encrypted)
-    print(ceaser_decrypt(m))
+    print(ceaser_decrypt(m, 3))
 
 
 
